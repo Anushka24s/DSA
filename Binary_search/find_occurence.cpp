@@ -69,11 +69,24 @@ int main()
 {
     int check[6] = {1, 2, 3, 3, 3, 4};
 
-    int found1 = firstOcurrence(check, 6, 3);
-    int found2 = lastOcurrence(check, 6, 3);
+    int first = firstOcurrence(check, 6, 3);
+    int last = lastOcurrence(check, 6, 3);
 
-    cout << "the first occurene is" << found1 << endl;
-    cout << "the last occurence is" << found2 << endl;
+    if (first == -1 || last == -1)
+    {
+        cout << "Key not found" << endl;
+    }
+    else
+    {
+        int count = (last - first) + 1;
+        cout << "The first occurrence is at index: " << first << endl;
+        cout << "The last occurrence is at index: " << last << endl;
+        cout << "The count of occurrences is: " << count << endl;
+    }
+
+    //     The first occurrence is at index: 2
+    //     The last occurrence is at index: 4
+    //     The count of occurrences is: 3  {(4-2)+1}
 
     return 0;
 }
