@@ -6,10 +6,10 @@ using namespace std;
 int findPivot(int arr[], int n)
 {
     int s = 0, e = n - 1;
+    int mid = s + (e - s) / 2;
 
     while (s < e)
     {
-        int mid = s + (e - s) / 2;
 
         if (arr[mid] >= arr[0])
         {

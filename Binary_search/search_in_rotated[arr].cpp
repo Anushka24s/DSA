@@ -3,6 +3,10 @@ using namespace std;
 
 int getPivot(vector<int> &arr, int n)
 {
+    if (arr[0] <= arr[n - 1])
+    {
+        return 0; // not rotated
+    }
 
     int s = 0;
     int e = n - 1;
