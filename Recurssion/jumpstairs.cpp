@@ -2,6 +2,7 @@
 using namespace std;
 
 // time complexity is O(3^n) because we are calling 3 recursive calls for each n
+// space complexity is O(n) because we are using recursion and the maximum depth of the recursion is n
 
 int jump_stairs(int n)
 {

@@ -5,7 +5,11 @@ int totalSubset = 0;
 
 // index -> ith index of input array
 // subset: array to store the subset
-void printSubset(const vector<int>& input, vector<int>& output, int index)
+// auto i : to print the subset
+// auto is used to print the subset because we don't know the size of the subset, it can be from 0 to n, so we use auto to print the subset
+// time complexity is O(2^n) because we are calling 2 recursive calls for each n
+// space complexity is O(n) because we are using recursion and the maximum depth of the recursion is n
+void printSubset(const vector<int> &input, vector<int> &output, int index)
 {
     // if saare elements traverse ho chuke hai
     if (index >= input.size())
